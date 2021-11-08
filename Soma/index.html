@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar</title>
+    <style>
+        header p{
+            font-size: 40px;
+            text-align: center;
+        }
+
+        input{
+            display: block;
+            margin: 10px 0;
+            width: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>Somar</p>
+    </header>
+    <main>
+        <div>
+            <label for="txt1">Valor 1</label>
+            <input type="number" name="txt1" id="txt1">
+                   
+            <label for="txt2">Valor 2</label>
+            <input type="number" name="txt2" id="txt2">
+            
+            <input type="button" value="Calcular" onclick="calcular()">
+        </div>
+        <div id = "res">
+            
+        </div>
+    </main>
+    <script>
+        
+        function calcular(){
+           var tn1 = document.getElementById('txt1');
+           var tn2 = document.getElementById('txt2');
+           var res = document.getElementById('res');
+
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var resul = n1 + n2;
+                
+             res.innerText =`A soma entre ${n1} e ${n2} é ${resul}`;
+            }
+    </script>
+</body>
+</html>
